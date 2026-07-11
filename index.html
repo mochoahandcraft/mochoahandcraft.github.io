@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mộc — Hoa giấy thủ công đẹp mãi không tàn</title>
+  <meta name="description" content="Mộc Hoa - Hoa giấy thủ công, bền đẹp, không tàn, làm quà tặng, trang trí, cưới hỏi." />
+
+  <!-- Tailwind Play CDN: no build step, deploy as a plain static file -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Alex+Brush&display=swap" rel="stylesheet" />
+  <!-- Font Awesome (footer social icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            rose:   { 50:'#fdf5f6', 100:'#f8e3e7', 200:'#f0c7d0', 300:'#e2a3b1', 400:'#d17690', 500:'#c14f72', 600:'#a53a5c', 700:'#86304c', 800:'#6b2740', 900:'#4a1c2f' },
+            plum:   { 50:'#f6f1f8', 100:'#e9dced', 200:'#d3b9dd', 300:'#b98cc7', 400:'#9c65ac', 500:'#7f4a90', 600:'#663a74', 700:'#52305d', 800:'#40274a', 900:'#2f1c37' },
+            cream:  '#faf6f0',
+            terra:  '#c48b6a',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            brand: ['"Alex Brush"', 'cursive'],
+            sans:  ['"Be Vietnam Pro"', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    body { font-family:'Be Vietnam Pro',sans-serif; }
+    /* Paper-texture-ish photo placeholders (swap for real product photos). */
+    .paper-1 { background:radial-gradient(120% 120% at 30% 20%, #f8e3e7 0%, #f0c7d0 45%, #e2a3b1 100%); }
+    .paper-2 { background:radial-gradient(120% 120% at 70% 25%, #f6f1f8 0%, #d3b9dd 55%, #9c65ac 100%); }
+    .paper-3 { background:radial-gradient(120% 120% at 40% 30%, #fdf6ee 0%, #e3c2a0 55%, #c48b6a 100%); }
+    .paper-4 { background:radial-gradient(120% 120% at 60% 20%, #f8e3e7 0%, #e2a3b1 40%, #a53a5c 100%); }
+    .paper-5 { background:radial-gradient(120% 120% at 35% 25%, #f6f1f8 0%, #b98cc7 50%, #663a74 100%); }
+    .paper-6 { background:radial-gradient(120% 120% at 65% 30%, #fdf6ee 0%, #d6a06e 55%, #6b2740 100%); }
+    .hero-bg { background:
+        radial-gradient(60% 90% at 85% 10%, rgba(209,118,144,.5) 0%, transparent 60%),
+        radial-gradient(50% 80% at 10% 90%, rgba(185,140,199,.45) 0%, transparent 55%),
+        linear-gradient(180deg,#faf6f0 0%, #f8e3e7 100%); }
+    .marquee { animation: scroll 28s linear infinite; }
+    @keyframes scroll { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+  </style>
+</head>
+<body class="bg-cream text-rose-900 antialiased">
+
+  <!-- ============ HEADER ============ -->
+  <header class="sticky top-0 z-40 bg-cream/90 backdrop-blur border-b border-rose-100">
+    <div class="mx-auto max-w-7xl px-4">
+      <div class="flex items-center justify-between gap-6 h-20">
+        <!-- Logo -->
+        <a href="#" class="flex items-center min-w-0">
+          <img src="logo-notext.png" alt="Mộc Hoa" class="h-16 w-16 object-contain shrink-0" />
+          <span class="leading-tight min-w-0">
+            <span class="block font-brand text-xl sm:text-2xl lg:text-3xl text-rose-800 truncate">Mộc Hoa</span>
+            <span class="block text-[9px] sm:text-[10px] tracking-[0.2em] sm:tracking-[0.25em] uppercase text-plum-600 truncate">Hoa giấy thủ công</span>
+          </span>
+        </a>
+
+        <!-- Nav -->
+        <nav class="hidden md:flex items-center gap-1 text-sm font-medium text-rose-800">
+          <a href="#products" class="px-3 py-2 rounded-lg hover:bg-rose-50">Sản phẩm</a>
+          <a href="#process" class="px-3 py-2 rounded-lg hover:bg-rose-50">Quy trình</a>
+          <a href="#why" class="px-3 py-2 rounded-lg hover:bg-rose-50">Vì sao chọn chúng tôi</a>
+          <a href="#faq" class="px-3 py-2 rounded-lg hover:bg-rose-50">Hỏi đáp</a>
+        </nav>
+
+        <!-- CTA -->
+        <div class="flex items-center gap-3 shrink-0">
+          <a href="tel:0968208041" class="hidden sm:flex flex-col items-end leading-tight">
+            <span class="text-[11px] text-plum-600">Liên hệ ngay</span>
+            <!-- <i class="fa-solid fa-phone px-2"></i> -->
+            <span class="font-semibold text-rose-700">0968 208 041</span>
+          </a>
+          <a href="#products" class="inline-flex items-center rounded-full bg-rose-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-rose-700">Đặt hoa</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero-bg">
+    <div class="mx-auto max-w-7xl px-4 py-16 lg:py-24 grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-1.5 text-xs font-semibold tracking-wide text-plum-700 ring-1 ring-plum-200">
+          🌿 Thủ công 100% · Bền đẹp vĩnh cửu
+        </span>
+        <h1 class="mt-5 font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] text-rose-800">
+          Hoa giấy handmade<br class="hidden sm:block" /> đẹp mãi không tàn
+        </h1>
+        <p class="mt-5 max-w-xl text-lg text-rose-900/80">
+          Xưởng hoa giấy thủ công tại Tp.HCM. Từng cánh hoa được gấp, cắt và tạo dáng bằng tay — món quà lưu giữ khoảnh khắc mãi tươi, cho tình yêu, sinh nhật, cưới hỏi và trang trí không gian.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#products" class="inline-flex items-center rounded-full bg-rose-600 px-7 py-3.5 font-semibold text-white shadow-lg shadow-rose-600/25 hover:bg-rose-700">Xem bộ sưu tập</a>
+          <a href="#process" class="inline-flex items-center rounded-full bg-white px-7 py-3.5 font-semibold text-rose-700 ring-1 ring-rose-200 hover:bg-rose-50">Cách chúng tôi làm hoa</a>
+        </div>
+        <dl class="mt-10 grid grid-cols-3 gap-6 max-w-md">
+          <div><dt class="font-serif text-3xl font-bold text-rose-700">8+</dt><dd class="text-sm text-rose-900/60">năm kinh nghiệm</dd></div>
+          <div><dt class="font-serif text-3xl font-bold text-rose-700">12k</dt><dd class="text-sm text-rose-900/60">đơn hàng đã giao</dd></div>
+          <div><dt class="font-serif text-3xl font-bold text-rose-700">100%</dt><dd class="text-sm text-rose-900/60">làm bằng tay</dd></div>
+        </dl>
+      </div>
+
+      <!-- Hero visual -->
+      <div class="relative">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="paper-1 aspect-[3/4] rounded-3xl shadow-xl"></div>
+          <div class="paper-2 aspect-[3/4] rounded-3xl shadow-xl mt-10"></div>
+        </div>
+        <div class="absolute -bottom-6 left-6 rounded-2xl bg-white px-5 py-4 shadow-xl ring-1 ring-rose-100">
+          <p class="text-xs text-plum-600">Giao nhanh nội thành</p>
+          <p class="font-serif text-lg font-semibold text-rose-800">Trong 2 giờ ⚡</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST MARQUEE ============ -->
+  <div class="bg-rose-800 text-rose-50 py-3 overflow-hidden">
+    <div class="marquee flex whitespace-nowrap gap-12 text-sm font-medium">
+      <span class="flex gap-12"><span>✦ Không tàn, không cần tưới</span><span>✦ Chất liệu giấy cao cấp</span><span>✦ Đặt mẫu theo yêu cầu</span><span>✦ Miễn phí thiệp &amp; gói quà</span><span>✦ Giao tận nơi tại Tp.HCM</span></span>
+      <span class="flex gap-12" aria-hidden="true"><span>✦ Không tàn, không cần tưới</span><span>✦ Chất liệu giấy cao cấp</span><span>✦ Đặt mẫu theo yêu cầu</span><span>✦ Miễn phí thiệp &amp; gói quà</span><span>✦ Giao tận nơi tại Tp.HCM</span></span>
+    </div>
+  </div>
+
+  <!-- ============ FEATURED PRODUCTS ============ -->
+  <section id="products" class="bg-rose-50/60 border-y border-rose-100">
+    <div class="mx-auto max-w-7xl px-4 py-16 lg:py-20">
+      <div class="text-center max-w-2xl mx-auto">
+        <p class="text-sm font-semibold uppercase tracking-widest text-plum-600">Bộ sưu tập</p>
+        <h2 class="mt-2 font-serif text-3xl sm:text-4xl font-bold text-rose-800">Hoa giấy nổi bật</h2>
+      </div>
+
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- product 1 -->
+        <article class="group rounded-3xl bg-white overflow-hidden ring-1 ring-rose-100 hover:shadow-xl transition">
+          <div class="relative aspect-square overflow-hidden">
+            <img src="images/sample1.jpg" alt="Bó hoa giấy Tulip hồng nơ lụa" class="h-full w-full object-cover group-hover:scale-105 transition" />
+            <span class="absolute top-3 left-3 rounded-full bg-rose-600 text-white text-xs font-semibold px-3 py-1">-15%</span>
+          </div>
+          <div class="p-5">
+            <p class="text-xs text-plum-600">Bó hoa giấy</p>
+            <h3 class="mt-1 font-semibold text-rose-800">Bó Tulip hồng nơ lụa</h3>
+            <div class="mt-3 flex items-center gap-2">
+              <span class="font-serif text-lg font-bold text-rose-700">450.000₫</span>
+              <span class="text-sm text-rose-300 line-through">530.000₫</span>
+            </div>
+          </div>
+        </article>
+        <!-- product 2 -->
+        <article class="group rounded-3xl bg-white overflow-hidden ring-1 ring-rose-100 hover:shadow-xl transition">
+          <div class="relative aspect-square overflow-hidden">
+            <img src="images/4.png" alt="Cành hoa lan tím" class="h-full w-full object-cover group-hover:scale-105 transition" />
+          </div>
+          <div class="p-5">
+            <p class="text-xs text-plum-600">Hoa cành trang trí</p>
+            <h3 class="mt-1 font-semibold text-rose-800">Cành hoa lan tím</h3>
+            <div class="mt-3 flex items-center gap-2">
+              <span class="font-serif text-lg font-bold text-rose-700">280.000₫</span>
+            </div>
+          </div>
+        </article>
+        <!-- product 3 -->
+        <article class="group rounded-3xl bg-white overflow-hidden ring-1 ring-rose-100 hover:shadow-xl transition">
+          <div class="relative aspect-square overflow-hidden">
+            <img src="images/sample2.png" alt="Bình lá Eucalyptus giấy để bàn" class="h-full w-full object-cover group-hover:scale-105 transition" />
+            <span class="absolute top-3 left-3 rounded-full bg-plum-600 text-white text-xs font-semibold px-3 py-1">Mới</span>
+          </div>
+          <div class="p-5">
+            <p class="text-xs text-plum-600">Hoa để bàn</p>
+            <h3 class="mt-1 font-semibold text-rose-800">Bình lá Eucalyptus để bàn</h3>
+            <div class="mt-3 flex items-center gap-2">
+              <span class="font-serif text-lg font-bold text-rose-700">320.000₫</span>
+            </div>
+          </div>
+        </article>
+        <!-- product 4 -->
+        <article class="group rounded-3xl bg-white overflow-hidden ring-1 ring-rose-100 hover:shadow-xl transition">
+          <div class="relative aspect-square overflow-hidden">
+            <img src="images/sample3.jpg" alt="Cành hoa Mao lương vàng" class="h-full w-full object-cover group-hover:scale-105 transition" />
+          </div>
+          <div class="p-5">
+            <p class="text-xs text-plum-600">Hoa cành trang trí</p>
+            <h3 class="mt-1 font-semibold text-rose-800">Cành hoa Mao lương vàng</h3>
+            <div class="mt-3 flex items-center gap-2">
+              <span class="font-serif text-lg font-bold text-rose-700">260.000₫</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="mt-10 text-center">
+        <a href="tel:0968208041" class="inline-flex items-center rounded-full bg-rose-600 px-7 py-3.5 font-semibold text-white shadow-lg shadow-rose-600/25 hover:bg-rose-700">
+          <span class="font-semibold text-white-700"><i class="fa-solid fa-phone pr-2"></i>0968 208 041</span>
+          <!-- <div class="sm:flex flex-col items-center leading-tight">
+          </div> -->
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section id="process" class="mx-auto max-w-7xl px-4 py-16 lg:py-24">
+    <div class="grid lg:grid-cols-2 gap-14 items-center">
+      <div class="order-2 lg:order-1 grid grid-cols-2 gap-4">
+        <div class="paper-2 aspect-square rounded-3xl"></div>
+        <div class="paper-3 aspect-square rounded-3xl mt-8"></div>
+        <div class="paper-5 aspect-square rounded-3xl -mt-4"></div>
+        <div class="paper-1 aspect-square rounded-3xl mt-4"></div>
+      </div>
+      <div class="order-1 lg:order-2">
+        <p class="text-sm font-semibold uppercase tracking-widest text-plum-600">Quy trình thủ công</p>
+        <h2 class="mt-2 font-serif text-3xl sm:text-4xl font-bold text-rose-800">Mỗi bông hoa, một câu chuyện</h2>
+        <p class="mt-4 text-rose-900/75">Chúng tôi không dùng máy. Từng cánh hoa đi qua bàn tay người thợ — tỉ mỉ để hoa giấy sống động như thật và bền theo năm tháng.</p>
+        <ol class="mt-8 space-y-6">
+          <li class="flex gap-4">
+            <span class="grid place-items-center h-10 w-10 shrink-0 rounded-full bg-rose-100 text-rose-700 font-serif font-bold"><i class="fa-solid fa-1"></i></span>
+            <div><h3 class="font-semibold text-rose-800">Chọn giấy &amp; phối màu</h3><p class="text-sm text-rose-900/70">Giấy nhún, giấy mỹ thuật cao cấp, màu nhuộm an toàn.</p></div>
+          </li>
+          <li class="flex gap-4">
+            <span class="grid place-items-center h-10 w-10 shrink-0 rounded-full bg-rose-100 text-rose-700 font-serif font-bold"><i class="fa-solid fa-2"></i></span>
+            <div><h3 class="font-semibold text-rose-800">Cắt &amp; tạo dáng cánh</h3><p class="text-sm text-rose-900/70">Uốn từng cánh cho độ cong tự nhiên như hoa thật.</p></div>
+          </li>
+          <li class="flex gap-4">
+            <span class="grid place-items-center h-10 w-10 shrink-0 rounded-full bg-rose-100 text-rose-700 font-serif font-bold"><i class="fa-solid fa-3"></i></span>
+            <div><h3 class="font-semibold text-rose-800">Lắp ráp &amp; hoàn thiện</h3><p class="text-sm text-rose-900/70">Ghép bông, tạo bó, gói và kèm thiệp theo yêu cầu.</p></div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY US ============ -->
+  <section id="why" class="bg-plum-50 border-y border-plum-100">
+    <div class="mx-auto max-w-7xl px-4 py-16 lg:py-20">
+      <div class="text-center max-w-2xl mx-auto">
+        <p class="text-sm font-semibold uppercase tracking-widest text-plum-600">Dịch vụ Mộc Hoa</p>
+        <h2 class="mt-2 font-serif text-3xl sm:text-4xl font-bold text-rose-800">Vì sao chọn hoa giấy?</h2>
+      </div>
+      <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="rounded-3xl bg-white p-7 ring-1 ring-plum-100">
+          <div class="grid place-items-center h-14 w-14 rounded-2xl bg-rose-100 text-2xl text-rose-700"><i class="fa-solid fa-envelope-open-text"></i></div>
+          <h3 class="mt-5 font-serif text-lg font-semibold text-rose-800">Tặng thiệp &amp; gói miễn phí</h3>
+          <p class="mt-2 text-sm text-rose-900/70">Thiệp in theo lời nhắn và túi/hộp đựng sang trọng, hoàn toàn miễn phí.</p>
+        </div>
+        <div class="rounded-3xl bg-white p-7 ring-1 ring-plum-100">
+          <div class="grid place-items-center h-14 w-14 rounded-2xl bg-rose-100 text-2xl text-rose-700"><i class="fa-solid fa-truck-fast"></i></div>
+          <h3 class="mt-5 font-serif text-lg font-semibold text-rose-800">Giao hoa tận nhà</h3>
+          <p class="mt-2 text-sm text-rose-900/70">Giao nhanh, đúng hẹn, giữ hoa nguyên vẹn tới tận tay người nhận.</p>
+        </div>
+        <div class="rounded-3xl bg-white p-7 ring-1 ring-plum-100">
+          <div class="grid place-items-center h-14 w-14 rounded-2xl bg-rose-100 text-2xl text-rose-700"><i class="fa-solid fa-palette"></i></div>
+          <h3 class="mt-5 font-serif text-lg font-semibold text-rose-800">Đặt mẫu theo yêu cầu</h3>
+          <p class="mt-2 text-sm text-rose-900/70">Chọn loại hoa, màu sắc, kích thước riêng cho dịp đặc biệt của bạn.</p>
+        </div>
+        <div class="rounded-3xl bg-white p-7 ring-1 ring-plum-100">
+          <div class="grid place-items-center h-14 w-14 rounded-2xl bg-rose-100 text-2xl text-rose-700"><i class="fa-solid fa-recycle"></i></div>
+          <h3 class="mt-5 font-serif text-lg font-semibold text-rose-800">Bền &amp; thân thiện</h3>
+          <p class="mt-2 text-sm text-rose-900/70">Không tàn, không cần tưới, không rác thải hoa — đẹp bền nhiều năm.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIAL ============ -->
+  <section class="mx-auto max-w-3xl px-4 py-16 lg:py-20 text-center">
+    <p class="font-serif text-2xl sm:text-3xl leading-relaxed text-rose-800">
+      “Hoa giấy Mộc Hoa đẹp còn hơn cả hoa thật trong ảnh cưới của mình. Đến giờ vẫn để trên bàn làm việc, hai năm rồi vẫn tươi như ngày đầu.”
+    </p>
+    <p class="mt-5 text-sm font-semibold uppercase tracking-widest text-plum-600">— Thu Hà, cô dâu Tp.HCM</p>
+  </section>
+
+  <!-- ============ CTA BANNER ============ -->
+  <section class="mx-auto max-w-7xl px-4 py-16">
+    <div class="relative overflow-hidden rounded-[2rem] bg-rose-700 px-8 py-14 lg:py-16 text-center">
+      <div class="paper-1 absolute -top-16 -right-16 h-56 w-56 rounded-full opacity-30"></div>
+      <div class="paper-2 absolute -bottom-20 -left-16 h-56 w-56 rounded-full opacity-30"></div>
+      <div class="relative">
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-cream">Liên hệ Mộc Hoa cho dịp sắp tới của bạn</h2>
+        <p class="mt-3 text-rose-100 max-w-xl mx-auto">Nhắn Zalo hoặc gọi hotline, chúng tôi tư vấn mẫu và báo giá trong ít phút.</p>
+        <div class="mt-8 flex flex-wrap justify-center gap-3">
+          <a href="tel:0968208041" class="rounded-full bg-cream px-7 py-3.5 font-semibold text-rose-800 hover:bg-white"><span class="font-semibold text-white-700"><i class="fa-solid fa-phone pr-2"></i>0968 208 041</span></a>
+          <a href="#products" class="rounded-full bg-rose-600 px-7 py-3.5 font-semibold text-white ring-1 ring-rose-400 hover:bg-rose-500">Xem sản phẩm</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section id="faq" class="mx-auto max-w-3xl px-4 py-8 lg:py-12">
+    <div class="text-center">
+      <p class="text-sm font-semibold uppercase tracking-widest text-plum-600">Hỏi đáp</p>
+      <h2 class="mt-2 font-serif text-3xl sm:text-4xl font-bold text-rose-800">Câu hỏi thường gặp</h2>
+    </div>
+    <div class="mt-10 divide-y divide-rose-100 rounded-3xl bg-white ring-1 ring-rose-100">
+      <details class="group p-6" open>
+        <summary class="flex cursor-pointer items-center justify-between font-semibold text-rose-800 list-none">Hoa giấy có bền không? Bảo quản thế nào?<span class="text-rose-400 group-open:rotate-45 transition">+</span></summary>
+        <p class="mt-3 text-sm text-rose-900/70">Hoa giấy Mộc Hoa bền nhiều năm nếu tránh nước và ánh nắng gắt. Chỉ cần phủi bụi nhẹ định kỳ, hoa luôn như mới.</p>
+      </details>
+      <details class="group p-6">
+        <summary class="flex cursor-pointer items-center justify-between font-semibold text-rose-800 list-none">Sản phẩm có đúng mẫu như ảnh không?<span class="text-rose-400 group-open:rotate-45 transition">+</span></summary>
+        <p class="mt-3 text-sm text-rose-900/70">Mộc Hoa cam kết giao đúng mẫu, đúng màu. Vì làm thủ công nên mỗi bông có nét riêng nhỏ — đó là vẻ đẹp của handmade.</p>
+      </details>
+      <details class="group p-6">
+        <summary class="flex cursor-pointer items-center justify-between font-semibold text-rose-800 list-none">Có nhận đặt mẫu riêng và số lượng lớn không?<span class="text-rose-400 group-open:rotate-45 transition">+</span></summary>
+        <p class="mt-3 text-sm text-rose-900/70">Có. Chúng tôi nhận đặt theo yêu cầu cho cưới hỏi, sự kiện, quà doanh nghiệp. Vui lòng liên hệ trước 3–5 ngày cho đơn lớn.</p>
+      </details>
+      <details class="group p-6">
+        <summary class="flex cursor-pointer items-center justify-between font-semibold text-rose-800 list-none">Giao hàng ở đâu và mất bao lâu?<span class="text-rose-400 group-open:rotate-45 transition">+</span></summary>
+        <p class="mt-3 text-sm text-rose-900/70">Giao nội thành Tp.HCM trong 2 giờ, các tỉnh khác gửi qua chuyển phát 2–4 ngày, đóng gói chống móp kỹ càng.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="mt-8 bg-rose-900 text-rose-100">
+    <div class="mx-auto max-w-7xl px-4 py-14 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <div class="flex items-center gap-2">
+          <img src="logo-notext.png" alt="Mộc Hoa" class="h-10 w-10 object-contain" />
+          <span class="font-brand text-2xl text-cream">Mộc Hoa</span>
+        </div>
+        <p class="mt-4 text-sm text-rose-200/80">Hoa giấy thủ công. Đẹp mãi không tàn — trao gửi yêu thương bền lâu.</p>
+        <!-- <div class="mt-5 flex gap-3">
+          <a href="#" aria-label="Facebook" class="grid place-items-center h-9 w-9 rounded-full bg-rose-800 hover:bg-rose-700"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram" class="grid place-items-center h-9 w-9 rounded-full bg-rose-800 hover:bg-rose-700"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube" class="grid place-items-center h-9 w-9 rounded-full bg-rose-800 hover:bg-rose-700"><i class="fa-brands fa-youtube"></i></a>
+        </div> -->
+      </div>
+      <div>
+        <h3 class="font-semibold text-cream">Sản phẩm</h3>
+        <ul class="mt-4 space-y-2 text-sm text-rose-200/80">
+          <li><a href="#products" class="hover:text-white">Bó hoa giấy</a></li>
+          <li><a href="#products" class="hover:text-white">Tranh hoa</a></li>
+          <li><a href="#products" class="hover:text-white">Hoa cành</a></li>
+          <li><a href="#products" class="hover:text-white">Hoa bình</a></li>
+          <li><a href="#products" class="hover:text-white">Hộp quà tặng</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold text-cream">Thông tin</h3>
+        <ul class="mt-4 space-y-2 text-sm text-rose-200/80">
+          <li><a href="#process" class="hover:text-white">Quy trình thủ công</a></li>
+          <li><a href="#why" class="hover:text-white">Dịch vụ</a></li>
+          <li><a href="#faq" class="hover:text-white">Hỏi đáp</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold text-cream">Liên hệ</h3>
+        <ul class="mt-4 space-y-3 text-sm text-rose-200/80">
+          <li><i class="fa-solid fa-phone pr-2"></i><a href="tel:0968208041" class="hover:text-white">0968 208 041</a> (Zalo)</li>
+          <li><i class="fa-solid fa-clock pr-2"></i> 8:00 – 19:00 mỗi ngày</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-rose-800">
+      <div class="mx-auto max-w-7xl px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-rose-300/70">
+        <p>© 2026 Mộc Hoa · Hoa giấy thủ công.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating contact -->
+  <a href="tel:0968208041" class="fixed bottom-5 right-5 z-50 grid place-items-center h-14 w-14 rounded-full bg-rose-600 text-white text-2xl shadow-lg shadow-rose-600/40 hover:bg-rose-700 animate-pulse" aria-label="Gọi ngay"><i class="fa-solid fa-phone"></i></a>
+
+</body>
+</html>
