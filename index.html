@@ -47,8 +47,15 @@
         radial-gradient(60% 90% at 85% 10%, rgba(209,118,144,.5) 0%, transparent 60%),
         radial-gradient(50% 80% at 10% 90%, rgba(185,140,199,.45) 0%, transparent 55%),
         linear-gradient(180deg,#faf6f0 0%, #f8e3e7 100%); }
-    .marquee { animation: scroll 28s linear infinite; }
-    @keyframes scroll { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+    .marquee {
+      animation: scroll 28s linear infinite;
+      will-change: transform;
+      backface-visibility: hidden;
+    }
+    @keyframes scroll {
+      from { transform: translate3d(0, 0, 0); }
+      to   { transform: translate3d(-100%, 0, 0); }
+    }
   </style>
 </head>
 <body class="bg-cream text-rose-900 antialiased">
@@ -140,17 +147,82 @@
 
   <!-- ============ TRUST MARQUEE ============ -->
   <div class="bg-rose-800 text-rose-50 py-3 overflow-hidden">
-    <div class="marquee flex whitespace-nowrap gap-12 text-sm font-medium">
-      <span class="flex gap-12">
+    <div id="marquee-track" class="marquee flex whitespace-nowrap gap-12 text-sm font-medium">
+      <!-- Single source of truth — JS clones this at runtime so -50% always works -->
+      <div class="marquee-content flex gap-12">
         <span>✦ Không tàn, không cần tưới</span>
         <span>✦ Chất liệu giấy cao cấp</span>
         <span>✦ Đặt mẫu theo yêu cầu</span>
-        <span>✦ Giao tận nơi tại Tp.HCM</span></span>
-        <span class="flex gap-12" aria-hidden="true">
-          <span>✦ Không tàn, không cần tưới</span>
-          <span>✦ Chất liệu giấy cao cấp</span>
-          <span>✦ Đặt mẫu theo yêu cầu</span>
-          <span>✦ Giao tận nơi tại Tp.HCM</span></span>
+        <span>✦ Giao tận nơi tại Tp.HCM</span>
+        <span>✦ Không tàn, không cần tưới</span>
+        <span>✦ Chất liệu giấy cao cấp</span>
+        <span>✦ Đặt mẫu theo yêu cầu</span>
+        <span>✦ Giao tận nơi tại Tp.HCM</span>
+        <span>✦ Không tàn, không cần tưới</span>
+        <span>✦ Chất liệu giấy cao cấp</span>
+        <span>✦ Đặt mẫu theo yêu cầu</span>
+        <span>✦ Giao tận nơi tại Tp.HCM</span>
+        <span>✦ Không tàn, không cần tưới</span>
+        <span>✦ Chất liệu giấy cao cấp</span>
+        <span>✦ Đặt mẫu theo yêu cầu</span>
+        <span>✦ Giao tận nơi tại Tp.HCM</span>
+        <span>✦ Không tàn, không cần tưới</span>
+        <span>✦ Chất liệu giấy cao cấp</span>
+        <span>✦ Đặt mẫu theo yêu cầu</span>
+        <span>✦ Giao tận nơi tại Tp.HCM</span>
+        <span>✦ Không tàn, không cần tưới</span>
+        <span>✦ Chất liệu giấy cao cấp</span>
+        <span>✦ Đặt mẫu theo yêu cầu</span>
+        <span>✦ Giao tận nơi tại Tp.HCM</span>
+        <span>✦ Không tàn, không cần tưới</span>
+        <span>✦ Chất liệu giấy cao cấp</span>
+        <span>✦ Đặt mẫu theo yêu cầu</span>
+        <span>✦ Giao tận nơi tại Tp.HCM</span>
+        <span>✦ Không tàn, không cần tưới</span>
+        <span>✦ Chất liệu giấy cao cấp</span>
+        <span>✦ Đặt mẫu theo yêu cầu</span>
+        <span>✦ Giao tận nơi tại Tp.HCM</span>
+        <span>✦ Không tàn, không cần tưới</span>
+        <span>✦ Chất liệu giấy cao cấp</span>
+        <span>✦ Đặt mẫu theo yêu cầu</span>
+        <span>✦ Giao tận nơi tại Tp.HCM</span>
+        <span>✦ Không tàn, không cần tưới</span>
+        <span>✦ Chất liệu giấy cao cấp</span>
+        <span>✦ Đặt mẫu theo yêu cầu</span>
+        <span>✦ Giao tận nơi tại Tp.HCM</span>
+        <span>✦ Không tàn, không cần tưới</span>
+        <span>✦ Chất liệu giấy cao cấp</span>
+        <span>✦ Đặt mẫu theo yêu cầu</span>
+        <span>✦ Giao tận nơi tại Tp.HCM</span>
+        <span>✦ Không tàn, không cần tưới</span>
+        <span>✦ Chất liệu giấy cao cấp</span>
+        <span>✦ Đặt mẫu theo yêu cầu</span>
+        <span>✦ Giao tận nơi tại Tp.HCM</span>
+        <span>✦ Không tàn, không cần tưới</span>
+        <span>✦ Chất liệu giấy cao cấp</span>
+        <span>✦ Đặt mẫu theo yêu cầu</span>
+        <span>✦ Giao tận nơi tại Tp.HCM</span>
+        <span>✦ Không tàn, không cần tưới</span>
+        <span>✦ Chất liệu giấy cao cấp</span>
+        <span>✦ Đặt mẫu theo yêu cầu</span>
+        <span>✦ Giao tận nơi tại Tp.HCM</span>
+        <span>✦ Không tàn, không cần tưới</span>
+        <span>✦ Chất liệu giấy cao cấp</span>
+        <span>✦ Đặt mẫu theo yêu cầu</span>
+        <span>✦ Giao tận nơi tại Tp.HCM</span>
+        <span>✦ Không tàn, không cần tưới</span>
+        <span>✦ Chất liệu giấy cao cấp</span>
+        <span>✦ Đặt mẫu theo yêu cầu</span>
+        <span>✦ Giao tận nơi tại Tp.HCM</span>
+        <span>✦ Không tàn, không cần tưới</span>
+        <span>✦ Chất liệu giấy cao cấp</span>
+        <span>✦ Đặt mẫu theo yêu cầu</span>
+        <span>✦ Giao tận nơi tại Tp.HCM</span>
+        <span>✦ Không tàn, không cần tưới</span>
+        <span>✦ Chất liệu giấy cao cấp</span>
+        <span>✦ Đặt mẫu theo yêu cầu</span>
+        <span>✦ Giao tận nơi tại Tp.HCM</span>
+      </div>
     </div>
   </div>
 
@@ -425,6 +497,13 @@
   <a href="tel:0968208041" class="fixed bottom-5 right-5 z-[9999] grid place-items-center h-14 w-14 rounded-full bg-rose-600 text-white text-2xl shadow-lg shadow-rose-600/40 hover:bg-rose-700 animate-pulse transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500 focus-visible:ring-offset-2" aria-label="Gọi ngay"><i class="fa-solid fa-phone"></i></a>
 
   <script>
+    // Marquee: auto-clone so -50% translate always equals exactly one copy width
+    const track   = document.getElementById('marquee-track');
+    const content = track.querySelector('.marquee-content');
+    const clone   = content.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    track.appendChild(clone);
+
     const toggle   = document.getElementById('nav-toggle');
     const drawer   = document.getElementById('nav-drawer');
     const backdrop = document.getElementById('nav-backdrop');
